@@ -3,4 +3,7 @@ project(PROG2400_701_Lectures)
 
 set(CMAKE_CXX_STANDARD 17)
 
+set(CMAKE_EXE_LINKER_FLAGS "-static")
+
 add_executable(echo echo/main.cpp)
+add_executable(commandline commandline/main.cpp)
