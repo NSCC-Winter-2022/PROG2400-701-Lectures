@@ -2,10 +2,14 @@
 
 using namespace std;
 
-int main(int argc, char** argv) {
+void print() {
+    cout << "Hello World" << endl;
+}
+
+int main(int argc, char **argv) {
 
     for (int i = 0; i < argc; ++i) {
-        cout << (i+1) << ") " << argv[i] << endl;
+        cout << (i + 1) << ") " << argv[i] << endl;
     }
 
     // check if a filename was added as an argument

@@ -7,3 +7,5 @@ set(CMAKE_EXE_LINKER_FLAGS "-static")
 
 add_executable(echo echo/main.cpp)
 add_executable(commandline commandline/main.cpp)
+add_executable(stringstream stringstream/main.cpp)
+add_executable(dynamic_arrays dynamic_arrays/main.cpp)
