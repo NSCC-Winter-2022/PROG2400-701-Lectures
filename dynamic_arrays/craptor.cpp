@@ -38,16 +38,7 @@ public:
     }
 
     void resize(int size) {
-        int *temp = m_nums;
-        m_nums = new int[size];
-
-        int i;
-        for(i = 0; i < size; i++) {
-            m_nums[i] = temp[i];
-        }
         m_size = size;
-
-        delete[] temp;
     }
 
     friend ostream& operator<<(ostream& output, Craptor& c);
