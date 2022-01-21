@@ -34,7 +34,7 @@ public:
             delete[] temp;
         }
 
-        m_nums[++m_size] = num;
+        m_nums[m_size++] = num;
     }
 
     void resize(int size) {
