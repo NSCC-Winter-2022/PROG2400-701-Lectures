@@ -16,7 +16,14 @@ private:
 public:
     Queue() = default;
     virtual ~Queue() {
-        // TODO: finish this!
+        Node* node = m_first;
+
+        while (node != nullptr) {
+            Node* temp = node;
+
+            node = node->m_next;
+            delete temp;
+        }
     }
 
     void push(int num) {
