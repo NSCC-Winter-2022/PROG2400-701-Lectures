@@ -1,3 +1,4 @@
+#include "grade.h"
 #include "stack.h"
 #include <iostream>
 
@@ -11,7 +12,7 @@ int main() {
     cout << "Test 1: add a single value" << endl;
     cout << "--------------------------" << endl;
 
-    stack.push(1);
+    stack.push({10, 25});
 
     cout << stack << endl;
 
@@ -19,10 +20,10 @@ int main() {
     cout << "Test 2: add more nodes" << endl;
     cout << "----------------------" << endl;
 
-    stack.push(2);
-    stack.push(3);
-    stack.push(4);
-    stack.push(5);
+    stack.push({15, 20});
+    stack.push({20, 25});
+    stack.push({25, 35});
+    stack.push({35, 45});
 
     cout << stack << endl;
 
@@ -44,7 +45,7 @@ int main() {
     cout << "Test 5: pop all nodes off the stack" << endl;
     cout << "-----------------------------------" << endl;
 
-    while (stack.peek() != -1) {
+    while (stack.peek() != Grade(-1, -1)) {
         stack.pop();
     }
 

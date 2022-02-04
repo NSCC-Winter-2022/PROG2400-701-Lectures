@@ -1,11 +1,12 @@
 #ifndef _STACK_H
 #define _STACK_H
 
+#include "grade.h"
 #include <iostream>
 
 class Node {
 public:
-    int m_data {-1};
+    Grade m_data {-1, -1};
     Node* m_next {nullptr};
 };
 
@@ -17,8 +18,8 @@ public:
     Stack() = default;
     virtual ~Stack();
 
-    void push(int num);
-    int peek();
+    void push(Grade num);
+    Grade peek();
     void pop();
 
     friend std::ostream& operator<<(std::ostream& output, Stack& stack);

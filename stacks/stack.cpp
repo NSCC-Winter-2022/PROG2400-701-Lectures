@@ -4,7 +4,7 @@
 Stack::~Stack() {
 }
 
-void Stack::push(int num) {
+void Stack::push(Grade num) {
 
     auto new_node = new Node();
     new_node->m_data = num;
@@ -12,10 +12,10 @@ void Stack::push(int num) {
     m_top = new_node;
 }
 
-int Stack::peek() {
+Grade Stack::peek() {
     if (m_top != nullptr)
         return m_top->m_data;
-    return -1;
+    return {-1, -1};
 }
 
 void Stack::pop() {
