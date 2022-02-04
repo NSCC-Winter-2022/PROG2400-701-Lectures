@@ -1,57 +1,7 @@
+#include "stack.h"
 #include <iostream>
 
 using namespace std;
-
-class Node {
-public:
-    int m_data {-1};
-    Node* m_next {nullptr};
-};
-
-class Stack {
-private:
-    Node* m_top {nullptr};
-
-public:
-    Stack() = default;
-    virtual ~Stack() {
-    }
-
-    void push(int num) {
-
-        auto new_node = new Node();
-        new_node->m_data = num;
-        new_node->m_next = m_top;
-        m_top = new_node;
-    }
-
-    int peek() {
-        if (m_top != nullptr)
-            return m_top->m_data;
-        return -1;
-    }
-
-    void pop() {
-        if (m_top != nullptr) {
-            auto node = m_top;
-            m_top = m_top->m_next;
-            delete node;
-        } else {
-            cout << "There are no more nodes to remove..." << endl;
-        }
-    }
-
-    friend ostream& operator<<(ostream& output, Stack& stack);
-};
-
-ostream& operator<<(ostream& output, Stack& stack) {
-    auto node = stack.m_top;
-    while (node != nullptr) {
-        output << node->m_data << " ";
-        node = node->m_next;
-    }
-    return output;
-}
 
 int main() {
 
