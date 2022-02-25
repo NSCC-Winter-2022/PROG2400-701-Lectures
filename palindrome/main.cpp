@@ -14,23 +14,15 @@ bool is_palindrome(char* str, int len) {
 
 bool is_palindrome_recursive(char* str, int len) {
 
+    // one letter (or less) is a palindrome
     if (len <= 1)
         return true;
 
     // racecar = check 'r's and pass the rest on
-    if (str[0] != str[len - 1]) {
+    if (str[0] != str[len - 1])
         return false;
-    }
 
-    char* substr = new char[len - 1];
-    strncpy(substr, &str[1], len - 2);
-    substr[len - 2] = '\0';
-
-    bool retval = is_palindrome_recursive(substr, len - 2);
-
-    delete[] substr;
-
-    return retval;
+    return is_palindrome_recursive(&str[1], len - 2);
 }
 
 int main() {
