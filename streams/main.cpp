@@ -9,14 +9,16 @@ public:
 };
 
 istream&
-operator>>(istream& input, Data& data) {
+operator>>(istream& input, Data& data)
+{
 
     getline(input, data.m_data);
 
     return input;
 }
 
-int main() {
+int main()
+{
 
     ifstream file("sample.txt");
 
@@ -28,12 +30,12 @@ int main() {
     cin >> data;
     cout << data.m_data << endl;
 
-    Maze maze;
-    file >> maze;
-    maze.read(??)
-    maze.get_data_from_file(....)
-    
-    file << maze;
+    // Maze maze;
+    // file >> maze;
+    // maze.read(??)
+    // maze.get_data_from_file(....)
+
+    // file << maze;
 
     return 0;
 }
